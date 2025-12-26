@@ -1,0 +1,17 @@
+func isPalindrome(_ s: String) -> Bool {
+    var left = s.startIndex
+    var right = s.index(before: s.endIndex)
+    while left < right {
+        while left < right && !s[left].isLetter && !s[left].isNumber {
+            left = s.index(after: left)
+        }
+        while left < right && !s[right].isLetter && !s[right].isNumber {
+            right = s.index(before: right)
+        }
+        if left >= right { break }
+        if s[left].lowercased() != s[right].lowercased() { return false }
+        left = s.index(after: left)
+        right = s.index(before: right)
+    }
+    return true
+}
