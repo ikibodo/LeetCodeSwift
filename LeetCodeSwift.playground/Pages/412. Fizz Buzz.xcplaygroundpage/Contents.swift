@@ -1,3 +1,6 @@
+// Time: O(n)
+// Space: O(n)
+
 func fizzBuzz(_ n: Int) -> [String] {
     var result: [String] = []
     
@@ -15,3 +18,7 @@ func fizzBuzz(_ n: Int) -> [String] {
     
     return result
 }
+
+func fizzBuzzOneLine(_ n: Int) -> [String] {
+        (1...n).map { let s = ($0 % 3 == 0 ? "Fizz" : "") + ($0 % 5 == 0 ? "Buzz" : ""); return s.isEmpty ? String($0) : s }
+    }
