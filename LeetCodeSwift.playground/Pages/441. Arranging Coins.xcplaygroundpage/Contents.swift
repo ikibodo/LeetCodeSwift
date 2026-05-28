@@ -11,3 +11,9 @@ func arrangeCoins(_ n: Int) -> Int {
     
     return rows
 }
+
+// Time: O(1)
+// Space: O(1)
+func arrangeCoinsQuadratic(_ n: Int) -> Int {
+    return Int(((-1.0 + (1.0 + 8.0 * Double(n)).squareRoot()) / 2.0))
+}
