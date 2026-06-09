@@ -1,7 +1,6 @@
-//: [Previous](@previous)
+// Time: O(1)
+// Space: O(1)
 
-import Foundation
-
-var greeting = "Hello, playground"
-
-//: [Next](@next)
+func hammingDistance(_ x: Int, _ y: Int) -> Int {
+    return (x ^ y).nonzeroBitCount
+}
