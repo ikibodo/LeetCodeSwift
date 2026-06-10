@@ -20,3 +20,17 @@ func hammingDistance1(_ x: Int, _ y: Int) -> Int {
     
     return count
 }
+
+// Time: O(k),  k ≤ 32
+// Space: O(1)
+func hammingDistance2(_ x: Int, _ y: Int) -> Int {
+    var n = x ^ y
+    var count = 0
+    
+    while n > 0 {
+        n = n & (n - 1)
+        count += 1
+    }
+    
+    return count
+}
